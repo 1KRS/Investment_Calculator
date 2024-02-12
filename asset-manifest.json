@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Tic_Tac_Toe/static/css/main.f855e6bc.css",
-    "main.js": "/Tic_Tac_Toe/static/js/main.d64011c2.js",
-    "static/js/592.dabe9e09.chunk.js": "/Tic_Tac_Toe/static/js/592.dabe9e09.chunk.js",
-    "static/media/logo.svg": "/Tic_Tac_Toe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/Tic_Tac_Toe/index.html",
-    "main.f855e6bc.css.map": "/Tic_Tac_Toe/static/css/main.f855e6bc.css.map",
-    "main.d64011c2.js.map": "/Tic_Tac_Toe/static/js/main.d64011c2.js.map",
-    "592.dabe9e09.chunk.js.map": "/Tic_Tac_Toe/static/js/592.dabe9e09.chunk.js.map"
+    "main.css": "/Investment_Calculator/static/css/main.f855e6bc.css",
+    "main.js": "/Investment_Calculator/static/js/main.d48af19a.js",
+    "static/js/592.dabe9e09.chunk.js": "/Investment_Calculator/static/js/592.dabe9e09.chunk.js",
+    "static/media/logo.svg": "/Investment_Calculator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Investment_Calculator/index.html",
+    "main.f855e6bc.css.map": "/Investment_Calculator/static/css/main.f855e6bc.css.map",
+    "main.d48af19a.js.map": "/Investment_Calculator/static/js/main.d48af19a.js.map",
+    "592.dabe9e09.chunk.js.map": "/Investment_Calculator/static/js/592.dabe9e09.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.d64011c2.js"
+    "static/js/main.d48af19a.js"
   ]
 }
