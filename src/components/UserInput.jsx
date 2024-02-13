@@ -1,20 +1,5 @@
-import { useState } from 'react';
 
-const UserInput = () => {
-  const [inputs, setInputs] = useState({
-    initial: 0,
-    annual: 0,
-    expected: 0,
-    duration: 0,
-  });
-
-  const handleChange = (keyName, newValue) => {
-    setInputs((prevInputs) => {
-      return { 
-        ...prevInputs, [keyName]: newValue 
-      };
-    });
-  };
+const UserInput = (inputs, setInputs, handleChange) => {
 
   return (
     <section id="user-input">
