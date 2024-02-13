@@ -1,43 +1,41 @@
-
-const UserInput = (inputs, setInputs, handleChange) => {
-
+const UserInput = ({ inputs, handleChange }) => {
   return (
     <section id="user-input">
       <div className="input-group">
         <div>
-          <label htmlFor="">Initial Investment</label>
+          <label htmlFor="initialInvestment">Initial Investment</label>
           <input
-            name="initial"
+            name="initialInvestment"
             type="number"
             onChange={(e) => handleChange(e.target.name, e.target.value)}
-            value={inputs.initial}
+            value={inputs.initialInvestment}
             required
           />
         </div>
         <div>
-          <label htmlFor="">Annual Investment</label>
+          <label htmlFor="annualInvestment">Annual Investment</label>
           <input
-            name="annual"
+            name="annualInvestment"
             type="number"
             onChange={(e) => handleChange(e.target.name, e.target.value)}
-            value={inputs.annual}
+            value={inputs.annualInvestment}
             required
           />
         </div>
       </div>
       <div className="input-group">
         <div>
-          <label htmlFor="">Expected Return</label>
+          <label htmlFor="expectedReturn">Expected Return</label>
           <input
-            name="expected"
+            name="expectedReturn"
             type="number"
             onChange={(e) => handleChange(e.target.name, e.target.value)}
-            value={inputs.expected}
+            value={inputs.expectedReturn}
             required
           />
         </div>
         <div>
-          <label htmlFor="">Duration</label>
+          <label htmlFor="duration">Duration</label>
           <input
             name="duration"
             type="number"
