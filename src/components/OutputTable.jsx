@@ -1,14 +1,40 @@
-const OutputTable = () => {
+import { calculateInvestmentResults, formatter } from '../util/investment.jsx';
+
+const OutputTable = ({ inputs }) => {
+  const output = calculateInvestmentResults(inputs);
+
   return (
-    <div id='result'>
-    <thead>
+    <table id="result">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Investment Value</th>
+          <th>Interest (Year)</th>
+          <th>Total Interest</th>
+          <th>Invested Capital</th>
+        </tr>
+      </thead>
+      <tbody>
+        {output.map((year) => {
+          const totalInterest =
+            year.valueEndOfYear -
+            year.annualInvestment * year.year -
+            inputs.initialInvestment;
 
-    </thead>
-    <tbody>
+          const totalAmountInvested = year.valueEndOfYear - totalInterest;
 
-    </tbody>
-    
-    </div>
-  )
-}
-export default OutputTable
+          return (
+            <tr key={year.year}>
+              <td className='center'>{year.year}</td>
+              <td className='center'>{formatter.format(year.valueEndOfYear)}</td>
+              <td className='center'>{formatter.format(year.interest)}</td>
+              <td className='center'>{formatter.format(totalInterest)}</td>
+              <td className='center'>{formatter.format(totalAmountInvested)}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
+export default OutputTable;
