@@ -7,31 +7,32 @@ import UserInput from './components/UserInput.jsx';
 
 function App() {
   const [inputs, setInputs] = useState({
-    initial: 0,
-    annual: 0,
-    expected: 0,
-    duration: 0,
+    initialInvestment: 10000,
+    annualInvestment: 1000,
+    expectedReturn: 5,
+    duration: 10,
   });
+
+  const inputIsValid = inputs.duration >= 1;
 
   const handleChange = (keyName, newValue) => {
     setInputs((prevInputs) => {
       return {
         ...prevInputs,
-        [keyName]: newValue,
+        [keyName]: +newValue,
       };
     });
   };
 
   return (
-    <main className="App">
+    <>
       <Header />
-      <UserInput
-        inputs={inputs}
-        setInputs={setInputs}
-        handleChange={handleChange}
-      />
-      <OutputTable />
-    </main>
+      <UserInput inputs={inputs} handleChange={handleChange} />
+      {!inputIsValid && (
+        <h5 className="center">Please provide a duration greater than zero</h5>
+      )}
+      {inputIsValid && <OutputTable inputs={inputs} />}
+    </>
   );
 }
 
