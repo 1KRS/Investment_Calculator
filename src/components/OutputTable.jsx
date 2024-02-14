@@ -8,10 +8,10 @@ const OutputTable = ({ inputs }) => {
       <thead>
         <tr>
           <th>Year</th>
-          <th>Investment Value</th>
+          <th>Invested Capital</th>
           <th>Interest (Year)</th>
           <th>Total Interest</th>
-          <th>Invested Capital</th>
+          <th>Investment Value</th>
         </tr>
       </thead>
       <tbody>
@@ -25,11 +25,11 @@ const OutputTable = ({ inputs }) => {
 
           return (
             <tr key={year.year}>
-              <td className='center'>{year.year}</td>
-              <td className='center'>{formatter.format(year.valueEndOfYear)}</td>
-              <td className='center'>{formatter.format(year.interest)}</td>
-              <td className='center'>{formatter.format(totalInterest)}</td>
-              <td className='center'>{formatter.format(totalAmountInvested)}</td>
+              <td className='td'>{year.year}</td>
+              <td className='td'>{formatter.format(totalAmountInvested)}</td>
+              <td className='td'>{formatter.format(year.interest)}</td>
+              <td className='td'>{formatter.format(totalInterest)}</td>
+              <td className='td'>{formatter.format(year.valueEndOfYear)}</td>
             </tr>
           );
         })}
