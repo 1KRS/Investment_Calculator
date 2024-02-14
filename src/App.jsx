@@ -29,7 +29,7 @@ function App() {
       <Header />
       <UserInput inputs={inputs} handleChange={handleChange} />
       {!inputIsValid && (
-        <h5 className="center">Please provide a duration greater than zero</h5>
+        <h5 className="error-message">Please provide a duration greater than zero</h5>
       )}
       {inputIsValid && <OutputTable inputs={inputs} />}
     </>
