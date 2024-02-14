@@ -25,7 +25,7 @@ const UserInput = ({ inputs, handleChange }) => {
       </div>
       <div className="input-group">
         <div>
-          <label htmlFor="expectedReturn">Expected Return</label>
+          <label htmlFor="expectedReturn">Expected Return (%)</label>
           <input
             name="expectedReturn"
             type="number"
